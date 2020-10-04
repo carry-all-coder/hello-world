@@ -11,7 +11,7 @@ import random
 # In[50]:
 
 
-cocoRoot="/Users/ziming/Downloads/test/person_keypoints_val2017.json"
+cocoRoot="./person_keypoints_val2017.json"
 
 
 # In[51]:
@@ -81,8 +81,8 @@ print(imgIds_modi)
 # In[74]:
 
 import os,shutil
-fileDir='/Users/ziming/Downloads/test/train2017'
-tarDir='/Users/ziming/Downloads/test/val2017'
+fileDir='../deep-high-resolution-net.pytorch/data/coco/images/train201701'
+tarDir='../deep-high-resolution-net.pytorch/data/coco/images/val201701'
 for name in imgIds_modi:
     shutil.move(os.path.join(fileDir, name), os.path.join(tarDir, name))
 
