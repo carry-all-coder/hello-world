@@ -155,9 +155,8 @@ class COCODataset(JointsDataset):
         width = im_ann['width']
         height = im_ann['height']
 
-        #change:annIds = self.coco.getAnnIds(imgIds=index, iscrowd=False)
-        #objs = self.coco.loadAnns(annIds)
-        obj=self.coco.loadAnns([im_ann['id']])
+        annIds = self.coco.getAnnIds(imgIds=index, iscrowd=False)
+        objs = self.coco.loadAnns(annIds)
 
         # sanitize bboxes
         valid_objs = []
